@@ -1,20 +1,24 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * print_string - prints a string to stdout
- * @str: string to be printed
- * Return: no. of characters printed on success, or 0 on failure
+ * print_string - writes the character c to stdout
+ * @s: The string to print
+ *
+ * Return: 1.
  */
-int print_string(char *str)
+int print_string(va_list s)
 {
-	int chars_printed = 0;
+	char *my_string;
+	int i = 0;
 
-	if (str == (char *)0)
-		return (print_string("(null)"));
-	while (str && str[chars_printed])
+	my_string = va_arg(s, char *);
+	if (my_string == NULL)
+		my_string = "(null)";
+	while (my_string[i])
 	{
-		_putchar(str[chars_printed]);
-		chars_printed++;
+		_putchar(my_string[i]);
+		i++;
 	}
-	return (chars_printed);
+	return (i);
 }
