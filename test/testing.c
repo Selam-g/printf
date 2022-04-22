@@ -1,6 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
  * main - Entry point
@@ -10,14 +10,14 @@
 int main(void)
 {
 	int len;
-   	int len2;
+	int len2;
 	int alen;
 	int elen;
 	char c = 'z';
 	char *str = "sometimes    by";
 	/*char *str = NULL;*/
 	/*unsigned int ui;*/
-   	/*void *addr;*/
+	/*void *addr;*/
 
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -71,12 +71,12 @@ int main(void)
 	printf("Expected   :%%%d\n", len);
 	_printf("Actual : %%%d\n", len);
 	_printf("Len:[%d]\n", len);
-    	printf("Len:[%d]\n", len2);
-        /*printf("Unknown:[%d]\n");*/
-        _printf("Unknown:[%r]\n", "strings");
+	printf("Len:[%d]\n", len2);
+	/*printf("Unknown:[%d]\n");*/
+	_printf("Unknown:[%r]\n", "strings");
 	_printf("Unknown:[%r]\n");
 	_printf("word %b\n", 10);
-	len =_printf("word %R\n", str);
+	len = _printf("word %R\n", str);
 	_printf("%d\n", len);
 	/*printf("Expected %b\n", 98);*/
 	return (0);
